@@ -4,7 +4,7 @@ export function Header(){
     return(
         <Container>
 
-            <h1>Hello Currency</h1>
+            <h1>HC</h1>
 
         </Container>
     )
