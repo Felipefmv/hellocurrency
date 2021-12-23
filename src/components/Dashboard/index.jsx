@@ -29,17 +29,19 @@ export function Dashboard(){
         fromCurrency.value= Number(convertedValue1).toFixed(2)
     }
     function handleInputChange(){
+        console.log("test1")
         var option3 = fromSelect.value
         var option4 = toSelect.value
 
         var convertedValue2 = fromCurrency.value/currency[option3]*currency[option4]
         return toCurrency.value= Number(convertedValue2).toFixed(2)
+
     }
     
     return(
         <Container>
-        <input type="number" id="fromCurrency" min="1" defaultValue={fromCurrencyDefault} onInput={handleInputChange}></input>
-        <select type="" id="fromInitial" onInput={handleInputChange}>
+        <input type="number" id="fromCurrency" min="1" defaultValue={fromCurrencyDefault} onInput={()=>handleInputChange()}></input>
+        <select type="" id="fromInitial" onInput={()=>handleInputChange()}>
             {currencyInitials.map(currencyInitial=> {
                 if (currencyInitial !== "EUR"){
                     return <option  key={currencyInitial}>{currencyInitial}</option>
@@ -47,8 +49,8 @@ export function Dashboard(){
                 return <option key={currencyInitial} selected="selected">{currencyInitial}</option>
             })} 
         </select>
-        <input type="number" id="toCurrency" min="1" defaultValue={toCurrencyDefault} onInput={handleInputChangeSecondInput}></input>
-        <select type="" id="toInitial" onInput={handleInputChange}>
+        <input type="number" id="toCurrency" min="1" defaultValue={toCurrencyDefault} onInput={()=>handleInputChangeSecondInput()}></input>
+        <select type="" id="toInitial" onInput={()=>handleInputChange()}>
             {currencyInitials.map(currencyInitial=> {
                 if (currencyInitial !== "BRL"){
                     return <option key={currencyInitial}>{currencyInitial}</option>
