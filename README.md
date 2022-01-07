@@ -4,7 +4,7 @@
 
 ## :camera: Demonstração
 
-![gif](github/animaçãohc.gif)
+<img src="./github/animaçãoHC.gif"/>
 
 ## :dart: Objetivo
 
